@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import styled, { css } from 'styled-components';
 
 // eslint-disable-next-line import/prefer-default-export
@@ -10,13 +11,19 @@ export const ButtonContainer = styled.button`
   min-width: 120px;
   width: 100%;
 
+  // eslint-disable-next-line prettier/prettier
   ${({ variant }) => variant !== 'primary' && css`
     min-width: 167px;
     height: 33px;
     background: #E4105D;
 
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
     &::after {
-      content: '',
+      content: '';
       position: absolute;
       border: 1px solid #E4105D;
       top: -5px;
