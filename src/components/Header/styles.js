@@ -1,4 +1,4 @@
-import styled  from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
@@ -8,7 +8,7 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-`
+`;
 
 export const Row = styled.div`
     display: flex;
@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center
-`
+`;
 
 export const BuscarInputContainer = styled.div`
     width: 275px;
@@ -33,7 +33,10 @@ export const BuscarInputContainer = styled.div`
     padding: 2px 5px;
     margin: 0 12px;
     display:flex;
-`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
 
 export const Menu = styled.a`
     font-family: 'Open Sans';
@@ -43,7 +46,7 @@ export const Menu = styled.a`
     line-height: 25px;
     color: #FFFFFF;
     margin-right: 12px;
-`
+`;
 
 export const MenuRight = styled.a`
     font-family: 'Open Sans';
@@ -53,18 +56,18 @@ export const MenuRight = styled.a`
     color: #FFFFFF;
     margin-right: 12px;
     text-decoration: none;
-`
+`;
 
 export const UserPicture = styled.img`
     width: 32px;
     height: 32px;
     border-radius: 22px;
     border: 3px solid #FFFFFF;
-`
+`;
 
 export const Input = styled.input`
     background: transparent;
     flex: 1;
     border: 0;
     color: #FFFFFF;
-`
+`;
