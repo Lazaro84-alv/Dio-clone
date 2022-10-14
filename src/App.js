@@ -1,9 +1,7 @@
+import React from 'react';
+
 function App() {
-  return (
-    <div className="App">
-      Clone Dio
-    </div>
-  );
+  return <div>Clone Dio</div>;
 }
 
 export default App;
