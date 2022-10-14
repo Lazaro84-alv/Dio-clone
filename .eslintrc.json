@@ -19,13 +19,6 @@
     "plugins": [
         "react"
     ],
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true,
-        "parser": "flow"
-      }
-    ],
     "rules": {
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
     }
