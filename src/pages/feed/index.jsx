@@ -11,7 +11,7 @@ import { Container, Column, Title, TitleHighlight } from './styles';
 // eslint-disable-next-line react/function-component-definition
 const Feed = () => (
   <>
-    <Header />
+    <Header autenticado />
     <Container>
       <Column flex={3}>
         <Title>Feed</Title>

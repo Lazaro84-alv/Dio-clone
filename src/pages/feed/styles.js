@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 // eslint-disable-next-line import/prefer-default-export
 export const Container = styled.main`
- idth: 100%;
+    width: 100%;
     max-width: 80%;
     margin: 0 auto;
     margin-top: 120px;
