@@ -17,3 +17,7 @@ Tela de Login
 
 Tela de Feed
 <img width="1861" alt="Captura de Tela 2022-10-15 às 10 19 07" src="https://user-images.githubusercontent.com/75143575/195988889-e944dfd5-ae74-4117-9e1f-4a238184089c.png">
+
+Tela de Cadastro
+
+<img width="1906" alt="Captura de Tela 2022-10-16 às 11 39 24" src="https://user-images.githubusercontent.com/75143575/196041793-fc426e24-b70e-45fd-9634-30548ad54276.png">
