@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import bannerImage from '../../assets/banner.png';
 import { Header } from '../../components/Header';
-import { Button } from '../../components/Button';
+import Button from '../../components/Button';
 
 // eslint-disable-next-line object-curly-newline
 import { Container, TextContent, Title, TitleHighlight } from './styles';
