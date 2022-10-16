@@ -5,7 +5,7 @@ import React from 'react';
 
 import logo from '../../assets/logo-dio.png';
 
-import { Button } from '../Button';
+import Button from '../Button';
 
 import {
   BuscarInputContainer,
