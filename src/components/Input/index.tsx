@@ -3,6 +3,8 @@
 import React from 'react';
 import { Controller } from 'react-hook-form';
 
+import { IInput } from './types';
+
 import { IconContainer, InputContainer, InputText, ErrorText } from './styles';
 
 export default function Input({
@@ -11,7 +13,7 @@ export default function Input({
   control,
   errorMessage,
   ...rest
-}) {
+}: IInput) {
   return (
     <>
       <InputContainer>

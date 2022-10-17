@@ -1,11 +1,9 @@
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/prop-types */
-/* eslint-disable arrow-body-style */
 import React from 'react';
 
 import logo from '../../assets/logo-dio.png';
 
-import Button from '../Button';
+import Button from '../Button/index';
+import { IHeader } from './types';
 
 import {
   BuscarInputContainer,
@@ -18,8 +16,7 @@ import {
   Wrapper,
 } from './styles';
 
-// eslint-disable-next-line react/function-component-definition
-const Header = ({ autenticado }) => {
+export default function Header({ autenticado }: IHeader) {
   return (
     <Wrapper>
       <Container>
@@ -51,5 +48,3 @@ const Header = ({ autenticado }) => {
   );
 };
 
-// eslint-disable-next-line import/prefer-default-export
-export { Header };

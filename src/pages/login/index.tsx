@@ -1,16 +1,16 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 import { MdEmail, MdLock } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
-import { Header } from '../../components/Header';
+import Header from '../../components/Header';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 
+import { IFormData } from './types';
+
 import { api } from '../../services/api';
 
-// eslint-disable-next-line object-curly-newline
 import {
   Column,
   Container,
@@ -30,15 +30,15 @@ export default function Login() {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<IFormData>({
     reValidateMode: 'onChange',
     mode: 'onChange',
   });
 
-  const onSubmit = async (formData) => {
+  const onSubmit = async (formData: IFormData) => {
     try {
       const { data } = await api.get(
-        `/users?email=${formData.email}&senha=${formData.senha}`,
+        `/users?email=${formData.email}&senha=${formData.password}`,
       );
 
       if (data.length && data[0].id) {
@@ -83,7 +83,7 @@ export default function Login() {
                 name="senha"
                 control={control}
               />
-              {errors.senha && <span>Senha é obrigatório</span>}
+              {errors.password && <span>Senha é obrigatório</span>}
               <Button title="Entrar" variant="secondary" type="submit" />
             </form>
             <Row>

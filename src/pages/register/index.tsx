@@ -3,11 +3,13 @@ import { MdEmail, MdLock, MdPermIdentity } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
-import { Header } from '../../components/Header';
+import Header from '../../components/Header';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 
 import { api } from '../../services/api';
+
+import { IRegister } from './types';
 
 import {
   Container,
@@ -28,15 +30,15 @@ export default function Register() {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<IRegister>({
     reValidateMode: 'onChange',
     mode: 'onChange',
   });
 
-  const onSubmit = async (formData) => {
+  const onSubmit = async (formData: IRegister) => {
     try {
       const { data } = await api.get(
-        `/users?name=${formData.name}&${formData.email}&senha=${formData.senha}`,
+        `/users?name=${formData.name}&${formData.email}&senha=${formData.password}`,
       );
 
       if (data.length && data[0].id) {
@@ -88,7 +90,7 @@ export default function Register() {
                 name="senha"
                 control={control}
               />
-              {errors.senha && <span>Senha é obrigatório</span>}
+              {errors.password && <span>Senha é obrigatório</span>}
               <Button
                 title="Criar minha conta"
                 variant="secondary"

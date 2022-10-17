@@ -3,6 +3,8 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
 
+import { IUserInfo } from './types';
+
 // eslint-disable-next-line prettier/prettier
 import {
   Container,
@@ -12,7 +14,7 @@ import {
 } from './styles';
 
 // eslint-disable-next-line react/function-component-definition
-const UserInfo = ({ nome, image, percentual }) => {
+const UserInfo = ({ nome, image, percentual }: IUserInfo) => {
   return (
     <Container>
       <UserPicture src={image} />

@@ -1,8 +1,9 @@
 /* eslint-disable prettier/prettier */
 import styled, { css } from 'styled-components';
+import { IButtonStyled } from './types';
 
 // eslint-disable-next-line import/prefer-default-export
-export const ButtonContainer = styled.button`
+export const ButtonContainer = styled.button<IButtonStyled>`
   background: #565656;
   border-radius: 22px;
   position: relative;

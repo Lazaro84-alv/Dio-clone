@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { IColumn } from './types';
+
 // eslint-disable-next-line import/prefer-default-export
 export const Container = styled.main`
     width: 100%;
@@ -31,7 +33,7 @@ export const TitleHighlight = styled.h3`
     margin-bottom: 24px;
 `;
 
-export const Column = styled.div`
+export const Column = styled.div<IColumn>`
     flex:${({ flex }) => flex};
     padding-right: 24px;
 `;
