@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import styled, { css } from 'styled-components';
 import { IButtonStyled } from './types';
 
@@ -12,8 +11,9 @@ export const ButtonContainer = styled.button<IButtonStyled>`
   min-width: 120px;
   width: 100%;
 
-  // eslint-disable-next-line prettier/prettier
-  ${({ variant }) => variant !== 'primary' && css`
+  ${({ variant }) =>
+    variant !== 'primary' &&
+    css`
     min-width: 167px;
     height: 33px;
     background: #E4105D;

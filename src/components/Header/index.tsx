@@ -1,9 +1,9 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo-dio.png';
-
 import Button from '../Button/index';
-import { IHeader } from './types';
 
 import {
   BuscarInputContainer,
@@ -16,13 +16,20 @@ import {
   Wrapper,
 } from './styles';
 
-export default function Header({ autenticado }: IHeader) {
+import useAuth from '../../hooks/useAuth';
+
+export default function Header() {
+  const { user, handleSignOut } = useAuth();
+
   return (
+    // eslint-disable-next-line react/jsx-filename-extension
     <Wrapper>
       <Container>
         <Row>
-          <img src={logo} alt="Logo da dio" />
-          {autenticado ? (
+          <Link to="/">
+            <img src={logo} alt="Logo da dio" />
+          </Link>
+          {user.id ? (
             <>
               <BuscarInputContainer>
                 <Input placeholder="Buscar..." />
@@ -33,8 +40,13 @@ export default function Header({ autenticado }: IHeader) {
           ) : null}
         </Row>
         <Row>
-          {autenticado ? (
-            <UserPicture src="https://avatars.githubusercontent.com/u/75143575?v=4" />
+          {user.id ? (
+            <>
+              <UserPicture src="https://avatars.githubusercontent.com/u/75143575?v=4" />
+              <a href="#" onClick={handleSignOut}>
+                Sair
+              </a>
+            </>
           ) : (
             <>
               <MenuRight href="#">Home</MenuRight>

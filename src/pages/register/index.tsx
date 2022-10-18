@@ -38,7 +38,7 @@ export default function Register() {
   const onSubmit = async (formData: IRegister) => {
     try {
       const { data } = await api.get(
-        `/users?name=${formData.name}&${formData.email}&senha=${formData.password}`,
+        `/users?name=${formData.name}&${formData.email}&password=${formData.password}`,
       );
 
       if (data.length && data[0].id) {
@@ -85,9 +85,9 @@ export default function Register() {
               {errors.email && <span>E-mail é obrigatório</span>}
               <Input
                 type="password"
-                placeholder="Senha"
+                placeholder="password"
                 leftIcon={<MdLock />}
-                name="senha"
+                name="password"
                 control={control}
               />
               {errors.password && <span>Senha é obrigatório</span>}
